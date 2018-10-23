@@ -8,7 +8,7 @@ body{
 }
 
 .container{
-    width: 80%;
+    width: 90%;
     overflow: hidden;
     margin:auto;
 }
@@ -16,19 +16,31 @@ body{
 #main-header{
     background-color: darkred;
     color: white;
-    text-align: center; 
+    text-align: left;
+     
+}
+@media (min-width: 500px){
+    #main-header h1::before{
+        content:"Data Science Intro"
+    }
+}
+
+@media (max-width: 499px){
+    #main-header h1::before{
+        content:"Data Science"
+    }
 }
 
 
 #navbar{
     background:#333;
     color:whitesmoke;
-    text-align: right;
+    text-align: left;
     margin:none;
 }
 
 #navbar ul{
-    padding:0;
+    padding:0px;
     list-style:none;
 }
 
@@ -41,13 +53,19 @@ body{
     text-decoration: none;
     font-size: 18px;
     padding-right:15px;
+    padding-block-end: 100%;
+    padding-block-start: 100%;
+}
+
+#navbar a:hover{
+    background-color: firebrick;
 }
 
 #showcase{
     background-image: url("../images/cs50.jpg");
     background-color: firebrick;
     background-position: center right;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     min-height: 300px;
     text-align:center;
 }
@@ -55,5 +73,80 @@ body{
 #showcase h1{
     color:#fff;
     font-size:45px;
-    padding-top: 100px;
+    padding-top: 110px;
+}
+
+@media (min-width: 500px){
+    #showcase h1::before{
+        content: "Data Science is a tool to Uleash the power of Data";
+    }
+}
+
+@media (max-width: 499px){
+    #showcase h1::before{
+        content: "Data is Power";
+    }
+}
+
+#main-block{
+    float:left;
+    width:70%;
+    padding:15px;
+    box-sizing: border-box;
+    color: #fff;
+    background-color: coral;
+}
+
+#side-bar{
+    float: right;
+    width:30%;
+    padding:5px;
+    box-sizing: border-box;
+    background-image: url("../images/ds.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-bottom: 5px;
+    min-height: 300px;
+
+
+}
+
+.content{
+    background-color: darkred;
+    border: 1px #ccc solid;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+#definition{
+    color: #fff;
+
+    
+}
+
+.content table{
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    border-collapse: collapse;
+}
+
+.content th{
+    height: 40px;
+}
+
+.content table, th, td{
+    border: 1px solid black;
+}
+
+th{
+    background-color: slategray;
+    color: white;
+}
+tr:nth-child(even){
+    background-color: lightgray;
+}
+tr:nth-child(odd){
+    background-color: white;
 }
